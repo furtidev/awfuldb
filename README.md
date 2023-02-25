@@ -1,6 +1,11 @@
 # awfuldb
 ## Simple key-value database written in Go (using JSON)
 
+### Install
+```bash
+go get -v github.com/furtidev/awfuldb
+```
+
 ### Example
 ```go
 package main
@@ -13,7 +18,7 @@ import (
 )
 
 func main() {
-  obj := db.Database{DBPath="db.json"}
+  obj := db.Database{DBPath:"db.json"} // file needs to exist
   obj.Set("key", "value")
   key, err := obj.Get("key")
   if err != nil {
